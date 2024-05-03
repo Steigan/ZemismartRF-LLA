@@ -96,8 +96,8 @@ void ZRFAnalyzer::WorkerThread()
                 if( bitCount < 72 )
                 {
                     data = data << 1;
-
-                    if( period > samplesPerOneBitPulseMax ) // zero bit pulse
+                    
+                    if( mSettings->mLongIsOne != (period > samplesPerOneBitPulseMax) ) // zero bit pulse
                     {
                         mResults->AddMarker( markerPossition, AnalyzerResults::Zero, mSettings->mInputChannel );
                     }

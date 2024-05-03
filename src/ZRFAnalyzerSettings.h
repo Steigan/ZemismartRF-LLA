@@ -17,10 +17,12 @@ class ZRFAnalyzerSettings : public AnalyzerSettings
 
 
     Channel mInputChannel;
+    bool mLongIsOne;
     bool mUSBDongle;
 
   protected:
     std::auto_ptr<AnalyzerSettingInterfaceChannel> mInputChannelInterface;
+    std::auto_ptr<AnalyzerSettingInterfaceBool> mLongIsOneInterface;
     std::auto_ptr<AnalyzerSettingInterfaceBool> mUSBDongleInterface;
 };
 

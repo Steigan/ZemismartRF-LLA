@@ -40,6 +40,7 @@ U32 ZRFSimulationDataGenerator::GenerateSimulationData( U64 largest_sample_reque
 
 void ZRFSimulationDataGenerator::CreateZRFstream()
 {
+    // Here long impulse == bit zero, short impulse == bit one!!!
     // 5 series (uS):
     // Start: 2040, -4100 // RC: 2120, -4250
     // Bit 1: 410, -410   // RC: 422, -323 - last bit; 422, -427 - other bits
